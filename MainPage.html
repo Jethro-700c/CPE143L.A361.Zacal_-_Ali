@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="dashboard hidden" id="customer-page">
+        <h2>Welcome, Customer 👋</h2>
+
+        <div class="section">
+            <h3>Available Products</h3>
+            <div class="products-grid">
+                <div class="product">
+                    <img src="Carbonara.jpg" alt="Carbonara">
+                    <h4>Carbonara</h4>
+                    <p>₱140</p>
+                    <button onclick="addToCart('Carbonara', 140)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Spaghetti Bolognese.jpg" alt="Spaghetti Bolognese">
+                    <h4>Pizza Bolognese</h4>
+                    <p>₱200</p>
+                    <button onclick="addToCart('Spaghetti Bolognese', 200)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Pizza.jpg" alt="Pizza">
+                    <h4>Pizza</h4>
+                    <p>₱180</p>
+                    <button onclick="addToCart('Pizza', 180)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>🛒 Cart</h3>
+            <div id="cart"></div>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+
+        <div class="section">
+            <h3>🧾 Receipt</h3>
+            <div id="receipt"></div>
+        </div>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    
+</body>
+</html>
