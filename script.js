@@ -76,3 +76,36 @@ function checkout() {
     cart = [];
     cartDiv.innerHTML = "";
 }
+
+function showRegister() {
+    document.getElementById('login-page').classList.add('hidden');
+    document.getElementById('register-page').classList.remove('hidden');
+}
+
+function showLogin() {
+    document.getElementById('register-page').classList.add('hidden');
+    document.getElementById('login-page').classList.remove('hidden');
+}
+
+
+
+function register() {
+    const username = document.getElementById('new-username').value.trim();
+    const password = document.getElementById('new-password').value.trim();
+    const confirmPassword = document.getElementById('confirm-password').value.trim();
+    const error = document.getElementById('reg-error');
+
+    if (!username || !password || !confirmPassword) {
+        error.textContent = 'Please fill out all fields.';
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        error.textContent = 'Passwords do not match.';
+        return;
+    }
+
+    error.textContent = '';
+    alert('Registration successful!');
+    showLogin(); // go back to login after successful register
+}
