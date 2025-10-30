@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Login</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js"></script>
 </head>
 <body>
-
-    <div class="container" id="login-page"> 
-        
-        <h2>Login</h2>
-        <input type="text" id="username" placeholder="Username"><br>
-        <input type="password" id="password" placeholder="Password"><br>
-        <label><input type="checkbox" id="showPass"> Show Password</label><br><br>
-        <button onclick="login()">Login</button>
-        <button onclick="showRegister()">Register</button>
-        <p id="error"></p>
-        
+  <div class="wrapper">
+    <div class="banner">
+      <h1>🍽️ TasteBite</h1>
+      <p>Delicious meals, right at your doorstep</p>
     </div>
-    <script src="script.js"></script>
+
+    <div class="forms">
+      <section class="form-section" id="login">
+        <h2>Welcome Back!</h2>
+        <p class="subtitle">Login to continue your feast</p>
+        <form id="login-form" action="#" method="post">
+          <div class="input-field">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username" required>
+          </div>
+
+          <div class="input-field">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" required>
+          </div>
+
+          <div id="error" class="error" aria-live="polite"></div>
+
+          <button type="submit" class="btn">Login</button>
+
+          <p class="switch">Don't have an account?
+            <a href="registration.html">Create New Account</a>
+          </p>
+        </form>
+      </section>
+    </div>
+  </div>
 </body>
 </html>

@@ -3,17 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registation</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="container" id="register-page">
-        <h2>Registration</h2>
-        <input type="text" id="new-username" placeholder="Username"><br>
-        <input type="password" id="new-password" placeholder="Password"><br>
-        <input type="password" id="confirm-password" placeholder="Confirm Password"><br>
-        <button onclick="register()">Register</button>
-        <p id="error"></p>
+    <div class="wrapper">
+        <div class="banner">
+            <h1>🍽️ TasteBite</h1>
+            <p>Delicious meals, right at your doorstep</p>
+        </div>
+
+        <section class="form-section" id="register">
+            <h2>Create Your Account</h2>
+            <p class="subtitle">Join and order your favorites easily</p>
+
+            <form action="#" method="post">
+                <div class="input-field">
+                    <label>Full Name</label>
+                    <input type="text" name="fullname" required>
+                </div>
+
+                <div class="input-field">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div class="input-field">
+                    <label>Password</label>
+                    <input type="password" name="password" required>
+                </div>
+
+                <button type="submit" class="btn">Register</button>
+                <p class="switch">Already a member?
+                    <a href="login.html">Login here</a>
+                </p>
+            </form>
+        </section>
     </div>
 </body>
 </html>

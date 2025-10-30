@@ -3,18 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-    <div>
-        <div class="dashboard hidden" id="admin-page">
+    <div class="dashboard">
         <h2>Admin Dashboard</h2>
-        <div class="section"><h3>Sales</h3><p>₱35,000 (This Month)</p></div>
-        <div class="section"><h3>Inventory</h3><p>Spaghetti: 25 pcs<br>Carbonara: 30 pcs<br>Pizza: 40 pcs</p></div>
-        <div class="section"><h3>Transaction History</h3><p>Customer 1 - ₱350<br>Customer 2 - ₱500</p></div>
-        <button onclick="logout()">Logout</button>
+
+        <div class="top-section">
+            <div class="card sales">
+                <h3>Total Sales</h3>
+                <p class="amount">₱35,000</p>
+                <p class="sub">This Month</p>
+            </div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="section inventory">
+            <h3>Inventory</h3>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr><td>Spaghetti</td><td>25 pcs</td></tr>
+                <tr><td>Carbonara</td><td>30 pcs</td></tr>
+                <tr><td>Pizza</td><td>40 pcs</td></tr>
+            </table>
+        </div>
+
+        <div class="section transactions">
+            <h3>Transaction History</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Order</th>
+                    <th>Qty</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Customer 1</td>
+                    <td>Spaghetti</td>
+                    <td>2</td>
+                    <td>₱350</td>
+                    <td>2025-10-18</td>
+                    <td>10:30 AM</td>
+                </tr>
+                <tr>
+                    <td>Customer 2</td>
+                    <td>Pizza</td>
+                    <td>1</td>
+                    <td>₱500</td>
+                    <td>2025-10-17</td>
+                    <td>2:15 PM</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section production">
+            <h3>Add New Item</h3>
+            <form id="addItemForm">
+                <input type="text" id="itemName" placeholder="Item Name" required>
+                <input type="number" id="itemQty" placeholder="Quantity" required>
+                <button type="submit">Add Item</button>
+            </form>
+            <p id="confirmation"></p>
+        </div>
     </div>
 
+    <script src="admin.js"></script>
 </body>
 </html>

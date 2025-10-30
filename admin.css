@@ -1,0 +1,160 @@
+:root {
+    --mint: #a8edea;
+    --mint-dark: #4ad66d;
+    --mint-light: #d4f8e8;
+    --text-dark: #036666;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, var(--mint), #b8f3e1);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.dashboard {
+    background: var(--mint-light);
+    width: 95%;
+    max-width: 900px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    color: var(--text-dark);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card.sales {
+    background: #b9fbc0;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.card.sales .amount {
+    font-size: 2em;
+    font-weight: bold;
+    color: #028174;
+}
+
+.logout-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #e63946;
+}
+
+/* Sections */
+.section {
+    background: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section h3 {
+    margin-top: 0;
+    color: var(--text-dark);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border-bottom: 1px solid #c8fcea;
+    padding: 8px;
+    text-align: center;
+    color: #034c3c;
+}
+
+th {
+    background: #d4f8e8;
+    font-weight: 600;
+}
+
+/* Form */
+.production form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.production input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #99e2b4;
+    border-radius: 10px;
+    outline: none;
+}
+
+.production button {
+    background-color: var(--mint-dark);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.production button:hover {
+    background-color: #34a853;
+}
+
+#confirmation {
+    margin-top: 10px;
+    color: #028174;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .top-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .production form {
+        flex-direction: column;
+    }
+
+    .logout-btn {
+        width: 100%;
+    }
+}
