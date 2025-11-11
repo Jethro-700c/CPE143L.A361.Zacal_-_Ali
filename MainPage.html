@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Customer Dashboard</title>
-  <link rel="stylesheet" href="mainpage.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="customer-container">
@@ -19,7 +19,6 @@
     </header>
 
     <div class="content">
-      <!-- Food Category Buttons -->
       <div class="categories">
         <button onclick="showCategory('food')">Food</button>
         <button onclick="showCategory('drink')">Drink</button>
@@ -27,10 +26,9 @@
         <button onclick="showCategory('additional')">Additional</button>
       </div>
 
-      <!-- Product List -->
       <div id="food-list" class="product-grid"></div>
 
-      <!-- Selected Info + Add/Reset Buttons -->
+
       <div class="footer">
         <p id="selected-count">Selected items: 0</p>
         <div class="footer-buttons">
@@ -39,7 +37,6 @@
         </div>
       </div>
 
-      <!-- Cart Section -->
       <div class="cart">
         <h3>🛒 Your Cart</h3>
         <div id="cart"></div>
@@ -47,6 +44,12 @@
     </div>
   </div>
 
-  <script src="dashboard.js"></script>
+  <script>
+    // Redirect to login if not logged in as customer
+    if (localStorage.getItem('loggedIn') !== 'customer') {
+      window.location.href = 'login.html';
+    }
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
